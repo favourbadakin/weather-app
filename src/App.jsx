@@ -24,9 +24,6 @@ const App = () => {
         }); 
   };
 
-  console.log(weatherData.sys.country);
-  //console.log(weatherData.main.temp);
-
   return (
     <main className="px-4 py-8 lg:px-8 bg-hero-image bg-no-repeat bg-cover h-screen text-white">
       <form className="grid place-items-center" onSubmit={handleSubmit}>
@@ -37,31 +34,49 @@ const App = () => {
           value={location}
           type="text"
         />
-        <button>Submit</button>
+        <button>Search</button>
       </form>
       <div className="flex flex-col sm:gap-20 lg:gap-60">
-        <div>
+        <div className="text-center">
           <p className="text-sm mt-16">
-            {weatherData.name}, {weatherData.sys.country}
+            {weatherData.name},{" "}
+            {weatherData.sys ? <span>{weatherData.sys.country}</span> : null}
           </p>
           {weatherData.main ? (
             <h2 className="text-5xl font-bold">
               {Math.round(weatherData.main.temp - 273.15)}°C
             </h2>
           ) : null}
-          {/* <h2 className="text-5xl font-bold">56°C</h2> */}
         </div>
         <div className="flex text-center drop-shadow-lg justify-between w-full p-5 mt-60 sm:mt-0 rounded-xl bg-white bg-opacity-10 backdrop-blur-lg">
           <div>
-            <h4 className="font-bold">34°C</h4>
+            {weatherData.main ? (
+              <h4 className="font-bold">
+                {Math.round(weatherData.main.feels_like - 273.15)}°C
+              </h4>
+            ) : null}
+
             <p className="text-sm sm:text-base">Feels like</p>
           </div>
           <div>
-            <h4 className="font-bold">33%</h4>
+            {weatherData.main ? (
+              <h4 className="font-bold">{weatherData.main.pressure}hPa</h4>
+            ) : null}
+
+            <p className="text-sm sm:text-base">Pressure</p>
+          </div>
+          <div>
+            {weatherData.main ? (
+              <h4 className="font-bold">{weatherData.main.humidity}%</h4>
+            ) : null}
+
             <p className="text-sm sm:text-base">Humidity</p>
           </div>
           <div>
-            <h4 className="font-bold">2MPH</h4>
+            {weatherData.wind ? (
+              <h4 className="font-bold">{weatherData.wind.speed}MPH</h4>
+            ) : null}
+
             <p className="text-sm sm:text-base">Wind Speed</p>
           </div>
         </div>
