@@ -5,7 +5,7 @@
 This web application allows the user to input a city in the search bar and then renders the weather information of that location at that time.
 
 #### Live Server
-[https://.app]
+[https://xweatherapp.vercel.app]
 
 ## Installation and Setup Instructions
  

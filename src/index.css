@@ -9,15 +9,15 @@ font-family: 'Montserrat', sans-serif;
 }
 
 input::placeholder { 
-  color: rgb(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
   opacity: 1; 
 }
 
 :-ms-input-placeholder { 
-  color:rgb(255, 255, 255, 0.5);
+  color:rgba(255, 255, 255, 0.5);
 }
 
 ::-ms-input-placeholder { 
-  color:rgb(255, 255, 255, 0.5);
+  color:rgba(255, 255, 255, 0.5);
 }
 
