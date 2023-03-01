@@ -32,7 +32,7 @@ const App = () => {
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-blue-500"
+              className="w-5 h-5 text-[#C4C4C4]"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const App = () => {
           <input
             type="text"
             id="simple-search"
-            className="bg-transparent border text-white text-sm rounded-lg focus:outline-none focus:border-blue-500 block w-full pl-10 p-2.5"
+            className="bg-transparent border-2 text-white text-sm rounded-lg focus:outline-none focus:border-[#A1A1A1] block w-full pl-10 p-2.5"
             placeholder="Enter a Location"
             value={location}
             onChange={handleChange}
