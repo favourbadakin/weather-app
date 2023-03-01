@@ -24,17 +24,6 @@ const App = () => {
 
   return (
     <main className="px-4 py-8 lg:px-8 bg-hero-image bg-no-repeat bg-cover h-screen text-white">
-      {/* <form className="grid place-items-center" onSubmit={handleSubmit}>
-        <input
-          className="border-white border-2 bg-transparent p-2 w-[80%] lg:w-[400px] rounded-lg focus:outline-none"
-          placeholder="Enter a Location"
-          onChange={handleChange}
-          value={location}
-          type="text"
-        />
-        <button>Search</button>
-      </form> */}
-
       <form className="flex items-center" onSubmit={handleSubmit}>
         <label htmlFor="simple-search" className="sr-only">
           Search
@@ -43,7 +32,7 @@ const App = () => {
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-gray-500 dark:text-gray-400"
+              className="w-5 h-5 text-blue-500"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +47,7 @@ const App = () => {
           <input
             type="text"
             id="simple-search"
-            className="bg-transparent border border-grayk-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5"
+            className="bg-transparent border text-white text-sm rounded-lg focus:outline-none focus:border-blue-500 block w-full pl-10 p-2.5"
             placeholder="Enter a Location"
             value={location}
             onChange={handleChange}
