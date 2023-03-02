@@ -87,7 +87,7 @@ const App = () => {
               {Math.round(weatherData.main.temp - 273.15)}°C
             </h2>
           ) : null}
-          <p className="mt-3">{weatherData.weather[0].main}</p>
+          {weatherData.weather ? <p className="mt-3">{weatherData.weather[0].main}</p>:null}
         </div>
         <div className="flex text-center drop-shadow-lg justify-between w-full p-5 mt-60 sm:mt-0 rounded-xl bg-white bg-opacity-10 backdrop-blur-lg">
           <div>
