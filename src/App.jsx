@@ -48,7 +48,7 @@ const App = () => {
             type="text"
             id="simple-search"
             className="bg-transparent border-2 text-white text-sm rounded-lg focus:outline-none focus:border-[#A1A1A1] block w-full pl-10 p-2.5"
-            placeholder="Enter a Location"
+            placeholder="Type in a City"
             value={location}
             onChange={handleChange}
             required
